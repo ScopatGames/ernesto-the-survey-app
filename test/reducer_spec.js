@@ -53,4 +53,17 @@ describe('reducer', ()=>{
     }));
   });
 
+  it('handle INCREMENT', ()=> {
+    const initialState = Map({
+      count: -1
+    });
+    const action = {
+      type: 'INCREMENT'
+    };
+    const nextState = reducer(initialState, action);
+    expect(nextState).to.equal(fromJS({
+      count: 0
+    }));
+  });
+
 });
