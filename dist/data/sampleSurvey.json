@@ -1,0 +1,47 @@
+{
+  "intro": {
+    "message": "This is the intro",
+    "buttonLabel": "Begin"
+  },
+  "survey": [
+    {
+      "question": "Question 1",
+      "answer": [
+        "1A",
+        "1B",
+        "1C"
+      ],
+      "messages": [
+        "message 1A",
+        "message 1B",
+        "message 1C"
+      ]
+    },{
+      "question": "Question 2",
+      "answer": [
+        "2A",
+        "2B",
+        "2C"
+      ],
+      "messages": [
+        "message 3A",
+        "message 3B",
+        "message 3C"
+      ]
+    },{
+      "question": "Question 3",
+      "answer": [
+        "3A",
+        "3B"
+      ],
+      "messages": [
+        "message 3A",
+        "message 3B"
+      ]
+    }
+  ],
+  "closing": {
+    "message": "Closing Message",
+    "buttonLabel": "Submit"
+  }
+}
