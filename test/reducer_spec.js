@@ -15,15 +15,15 @@ describe('reducer', ()=>{
           message: "Intro message",
           buttonLabel: "Start"
         }),
-        survey: List.of({
+        survey: List.of(Map({
           question: "Q1",
           answer: List.of('1A', '1B'),
           message: List.of('1A', '1B')
-        },{
+        }),Map({
           question: "Q2",
           answer: List.of('2A', '2B'),
           message: List.of('2A', '2B')
-        }),
+        })),
         closing: Map({
           message: "Closing message",
           buttonLabel: "Submit"
@@ -37,15 +37,15 @@ describe('reducer', ()=>{
         message: "Intro message",
         buttonLabel: "Start"
       }),
-      survey: List.of({
+      survey: List.of(Map({
         question: "Q1",
         answer: List.of('1A', '1B'),
         message: List.of('1A', '1B')
-      },{
+      }),Map({
         question: "Q2",
         answer: List.of('2A', '2B'),
         message: List.of('2A', '2B')
-      }),
+      })),
       closing: Map({
         message: "Closing message",
         buttonLabel: "Submit"
