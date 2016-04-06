@@ -1,4 +1,4 @@
-# Ernesto the surveyor
+# Ernesto the survey app
 
 ## Installation Instructions
 
