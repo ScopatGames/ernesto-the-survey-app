@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 
 import Layout from './components/Layout';
 import { createReduxStore } from './store';
-import { Provider } from 'react-redux';
 
 require('./style.css');
 

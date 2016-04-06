@@ -3,12 +3,46 @@ import PureRenderMixin from 'react-addons-pure-render-mixin';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 
+import Message from './Message';
+
 const Texts = React.createClass({
   mixins: [PureRenderMixin],
   render: function(){
+    const count = this.props.count;
+    let renderComponent;
+
+    if(count === -1){
+      //intro condition
+      renderComponent = <div>
+          <Message text={this.props.intro.get('message')}/>
+        </div>;
+    } else if(count === 0){
+      //first question condition
+      renderComponent = <div>
+          <Message text={this.props.survey.getIn([count, 'question'])} />
+        </div>;
+    } else if(count < this.props.survey.length){
+      //question condition with message
+      renderComponent = <div>
+          <Message text={this.props.survey.getIn(count-1, 'responses', 'message')} />
+          <Message text={this.props.survey.getIn([count, 'question'])} />
+        </div>;
+    } else if(count === this.props.survey.length){
+      //closing condition
+      renderComponent = <div>
+          <Message text={this.props.survey.getIn(count-1, 'responses', 'message')} />
+          <Message text={this.props.closing.get('message')} />
+        </div>;
+    } else {
+      //parting message condition
+      renderComponent = <div>
+          <Message text={this.props.closing.get('partingMessage')} />
+        </div>
+    }
+
     return (
       <div>
-        <h1>Text Container</h1>
+        {renderComponent}
       </div>
     )
   }
@@ -16,7 +50,10 @@ const Texts = React.createClass({
 
 function mapStateToProps(state) {
   return {
-    //TODO insert props for text components
+    count: state.get('count'),
+    survey: state.get('survey'),
+    intro: state.get('intro'),
+    closing: state.get('closing')
   };
 }
 

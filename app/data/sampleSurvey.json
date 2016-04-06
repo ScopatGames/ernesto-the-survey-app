@@ -6,42 +6,53 @@
   "survey": [
     {
       "question": "Question 1",
-      "answer": [
-        "1A",
-        "1B",
-        "1C"
-      ],
-      "messages": [
-        "message 1A",
-        "message 1B",
-        "message 1C"
+      "responses": [
+        {
+          "answer": "1A",
+          "message": "1AM"
+        },
+        {
+          "answer": "1B",
+          "message": "1BM"
+        },
+        {
+          "answer": "1C",
+          "message": "1CM"
+        }
       ]
     },{
       "question": "Question 2",
-      "answer": [
-        "2A",
-        "2B",
-        "2C"
-      ],
-      "messages": [
-        "message 3A",
-        "message 3B",
-        "message 3C"
+      "responses": [
+        {
+          "answer": "2A",
+          "message": "2AM"
+        },
+        {
+          "answer": "2B",
+          "message": "2BM"
+        },
+        {
+          "answer": "2C",
+          "message": "2CM"
+        }
       ]
     },{
       "question": "Question 3",
-      "answer": [
-        "3A",
-        "3B"
-      ],
-      "messages": [
-        "message 3A",
-        "message 3B"
+      "responses": [
+        {
+          "answer": "3A",
+          "message": "1AM"
+        },
+        {
+          "answer": "3B",
+          "message": "3BM"
+        }
       ]
     }
   ],
   "closing": {
     "message": "Closing Message",
-    "buttonLabel": "Submit"
+    "buttonLabel": "Submit",
+    "partingMessage": "Thanks!"
   }
 }

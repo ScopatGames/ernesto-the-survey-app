@@ -16,7 +16,10 @@ const Controls = React.createClass({
 
 function mapStateToProps(state) {
   return {
-    //TODO insert props for controls components
+    count: state.get('count'),
+    survey: state.get('survey'),
+    intro: state.get('intro'),
+    closing: state.get('closing')
   };
 }
 
