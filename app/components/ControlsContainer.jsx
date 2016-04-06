@@ -3,12 +3,44 @@ import PureRenderMixin from 'react-addons-pure-render-mixin';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 
+import Control from './Control';
+import Answer from './Answer';
+
 const Controls = React.createClass({
   mixins: [PureRenderMixin],
   render: function(){
+    const count = this.props.count;
+    let renderComponent;
+
+    if(count === -1){
+      //intro condition
+      renderComponent = <div>
+          <Control label={this.props.intro.get('buttonLabel')}/>
+        </div>;
+    } else if(count < this.props.survey.length){
+      //question condition with message
+      const answerArray = this.props.survey.getIn([count, 'responses', 'answer']);
+      const answerComponents = answerArray.map((item) => {
+        return <Answer key={item} text={item}/>;
+      });
+
+      renderComponent = <div>
+          {answerComponents}
+        </div>;
+    } else if(count === this.props.survey.length){
+      //closing condition
+      renderComponent = <div>
+          <Control label={this.props.closing.get('buttonLabel')}/>
+        </div>;
+    } else {
+      //parting message condition
+      renderComponent = <div>
+        </div>
+    }
+
     return (
       <div>
-        <h1>Controls Container</h1>
+        {renderComponent}
       </div>
     )
   }
