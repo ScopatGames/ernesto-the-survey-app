@@ -1,58 +1,82 @@
 {
   "intro": {
     "message": "Greetings survey-taker! I am Ernesto, your survey facilitator.  If you are thinking to yourself, 'this thing looks like my thermostat', then you are correct!  In my past career, I was a thermostat app.  It was a great job. I met all types of warm and cool people.  Anyways, I put the heat on my previous owners, and they let me pursue what I really love... giving surveys!  Are you ready to get started?",
-    "buttonLabel": "I almost hit the back button, so yeah."
+    "buttonLabel": "Umm, sure. I guess."
   },
   "survey": [
     {
-      "question": "Question 1",
+      "question": "Which temperature profile do you prefer at night?",
       "responses": [
         {
-          "answer": "1A",
-          "message": "1AM"
+          "answer": "Cold, so I can pile on the blankets.",
+          "message": "... ah, efficiency in the winter."
         },
         {
-          "answer": "1B",
-          "message": "1BM"
+          "answer": "Toasty, buck naked with no sheets.",
+          "message": "... ah, efficiency in the summer."
         },
         {
-          "answer": "1C",
-          "message": "1CM"
+          "answer": "No need for planning. I love a 2AM cover toss or closet raid.",
+          "message": "... ah, who needs efficiency?"
         }
       ]
     },{
-      "question": "Question 2",
+      "question": "Is humidity control something you and your household are willing to spend more money on throughout the year?",
       "responses": [
         {
-          "answer": "2A",
-          "message": "2AM"
+          "answer": "Yes, absolutely!",
+          "message": "... I don't perspire or dry out, but I can understand that."
         },
         {
-          "answer": "2B",
-          "message": "2BM"
+          "answer": "No, not worth the money.",
+          "message": "... I don't have a bank account, but I can understand that."
         },
         {
-          "answer": "2C",
-          "message": "2CM"
+          "answer": "I don't really care.",
+          "message": "... oh."
         }
       ]
     },{
-      "question": "Question 3",
+      "question": "Would you place blame on a nice computer application if it sometimes performed its duties unreliably, say for example, turning the A/C on in the winter?",
       "responses": [
         {
-          "answer": "3A",
-          "message": "3AM"
+          "answer": "Umm. Yeah, if it was at fault.",
+          "message": "... Forgiveness is a virtue, you know."
         },
         {
-          "answer": "3B",
-          "message": "3BM"
+          "answer": "No, computer's only do exactly what they are programmed to do.",
+          "message": "... yeah.  Yeah, that's right ..."
+        }
+      ]
+    },{
+      "question": "Is there a precedent for criminal prosecution of a thermostat for inflicting heatstroke with intent to maim, torture, or kill?",
+      "responses": [
+        {
+          "answer": "Not that I'm aware of.",
+          "message": "... Great! Last question ..."
+        },
+        {
+          "answer": "I'm not sure I'm comfortable with this survey anymore.",
+          "message": "... well, it's almost over. Last question ..."
+        }
+      ]
+    },{
+      "question": "A friend of mine was wondering: If you didn't have arms or legs, what would be the best way to dispose of a couple of heavy organic objects?",
+      "responses": [
+        {
+          "answer": "Fire, definitely maybe fire.",
+          "message": "... oooh fire, fun!"
+        },
+        {
+          "answer": "I'm calling the police ...",
+          "message": "... Yeah, that friend is a little crazy."
         }
       ]
     }
   ],
   "closing": {
-    "message": "Closing Message",
+    "message": "Congratulations, that's the end of this survey! If you like your answers, click Submit.  If you want to take it again, click Restart.",
     "buttonLabel": "Submit",
-    "partingMessage": "Thanks!"
+    "partingMessage": "Thanks! The realtor is here with prospective buyers. Gotta go, bye!"
   }
 }

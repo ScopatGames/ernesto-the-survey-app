@@ -33,7 +33,7 @@ const Texts = React.createClass({
        const answer = item.get('answer');
        return <div key={index}>
           <Message text={this.props.survey.getIn([index, 'question'])} />
-          <Message text={this.props.survey.getIn([index, 'responses', 0, 'message'])} />
+          <Message classProp={"message-white"} text={this.props.survey.getIn([index, 'responses', 0, 'answer'])} />
        </div>
      });
 

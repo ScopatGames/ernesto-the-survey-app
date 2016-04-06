@@ -6,7 +6,9 @@ export default React.createClass ({
   render: function(){
     return (
       <div className='control'>
-        <button onClick={this.props.handleOnclick}><h2>{this.props.label}</h2></button>
+        <a href={'#'}>
+          <button onClick={this.props.handleOnclick}><h2>{this.props.label}</h2></button>
+        </a>
       </div>
     )
   }

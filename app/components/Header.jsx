@@ -6,8 +6,8 @@ export default class Header extends React.Component {
       <div className="header">
         <div className='character-base'>
           <div className='character-eye'>
-            <div className='character-shine'>
-            </div>
+          </div>
+          <div className='character-shine'>
           </div>
         </div>
       </div>
