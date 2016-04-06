@@ -17,9 +17,3 @@ export function increment(){
     type: 'INCREMENT'
   };
 }
-
-export function cleanResults(){
-  return {
-    type: 'CLEAN_RESULTS'
-  };
-}

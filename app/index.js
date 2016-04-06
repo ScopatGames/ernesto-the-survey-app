@@ -1,20 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
 import Layout from './components/Layout';
-import { getLocalSurvey, getSurvey } from './utils/utils';
+import { createReduxStore } from './store';
+import { Provider } from 'react-redux';
 
 require('./style.css');
 
-//The code below would be used to retrieve survey data asynchronously from a server
-//const SURVEY_NAME = "sampleSurvey";
-//const surveyData = getSurvey(SURVEY_NAME);
+// initialize data store
+const store = createReduxStore();
 
-//We are using the local data instead
-const surveyData = getLocalSurvey();
-console.log(surveyData);
-
-
-
-
-
-ReactDOM.render(<Layout/>, document.getElementById('app'));
+ReactDOM.render(
+  <Provider store={store}>
+    <Layout/>
+  </Provider>,
+  document.getElementById('app')
+);

@@ -5,8 +5,7 @@ function setState(state, newState) {
 }
 
 function increment(state) {
-  const count = state.get('count');
-  return state.set('count', count+1);
+  return state.update('count', value => value + 1);
 }
 
 function selectAnswer(state, answer){
@@ -21,7 +20,7 @@ export default function(state = Map(), action){
   case 'SET_STATE':
     return setState(state, action.state);
   case 'SELECT_ANSWER':
-    return selectAnswer(state, action.answer);
+    return increment(selectAnswer(state, action.answer));
   case 'INCREMENT':
     return increment(state);
   case 'CLEAN_RESULTS':

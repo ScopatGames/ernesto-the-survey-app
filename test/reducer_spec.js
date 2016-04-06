@@ -141,7 +141,7 @@ describe('reducer', ()=>{
     };
     const nextState = reducer(initialState, action);
     expect(nextState).to.equal(fromJS({
-      count: 0,
+      count: 1,
       intro: Map({
         message: "Intro message",
         buttonLabel: "Start"
