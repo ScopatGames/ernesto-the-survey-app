@@ -148,10 +148,10 @@ describe('reducer', ()=>{
       }),
       survey: List.of(Map({
         question: "Q1",
-        responses: Map({
+        responses: List.of(Map({
             answer: "1A",
             message: "1AM"
-          })
+          }))
       }),Map({
         question: "Q2",
         responses: List.of(

@@ -5,7 +5,7 @@ export default React.createClass ({
   mixins: [PureRenderMixin],
   render: function(){
     return (
-      <button>{this.props.text}</button>
+      <button onClick={this.props.handleOnclick}>{this.props.text}</button>
     )
   }
 });

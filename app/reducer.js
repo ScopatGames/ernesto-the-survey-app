@@ -11,7 +11,7 @@ function increment(state) {
 function selectAnswer(state, answer){
   const count = state.get('count');
   const response = state.getIn(['survey', count, 'responses', answer]);
-  return state.updateIn(['survey', count, 'responses'], () => response);
+  return state.updateIn(['survey', count, 'responses'], () => List.of(response));
 }
 
 

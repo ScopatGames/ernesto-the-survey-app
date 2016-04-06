@@ -15,22 +15,27 @@ const Controls = React.createClass({
     if(count === -1){
       //intro condition
       renderComponent = <div>
-          <Control label={this.props.intro.get('buttonLabel')}/>
+          <Control label={this.props.intro.get('buttonLabel')}
+                   handleOnclick={()=>this.props.increment()}/>
         </div>;
-    } else if(count < this.props.survey.length){
+    } else if(count < this.props.survey.size){
       //question condition with message
-      const answerArray = this.props.survey.getIn([count, 'responses', 'answer']);
-      const answerComponents = answerArray.map((item) => {
-        return <Answer key={item} text={item}/>;
+      const answerArray = this.props.survey.get(count).get('responses');
+      const answerComponents = answerArray.map((item, index) => {
+        const answer = item.get('answer');
+        return <Answer key={answer}
+                       text={answer}
+                       handleOnclick={()=>this.props.selectAnswer(index)}/>;
       });
 
       renderComponent = <div>
           {answerComponents}
         </div>;
-    } else if(count === this.props.survey.length){
+    } else if(count === this.props.survey.size){
       //closing condition
       renderComponent = <div>
-          <Control label={this.props.closing.get('buttonLabel')}/>
+          <Control label={this.props.closing.get('buttonLabel')}
+                   handleOnclick={()=>this.props.increment()}/>
         </div>;
     } else {
       //parting message condition

@@ -21,16 +21,16 @@ const Texts = React.createClass({
       renderComponent = <div>
           <Message text={this.props.survey.getIn([count, 'question'])} />
         </div>;
-    } else if(count < this.props.survey.length){
+    } else if(count < this.props.survey.size){
       //question condition with message
       renderComponent = <div>
-          <Message text={this.props.survey.getIn(count-1, 'responses', 'message')} />
+          <Message text={this.props.survey.getIn([count-1, 'responses', 0, 'message'])} />
           <Message text={this.props.survey.getIn([count, 'question'])} />
         </div>;
-    } else if(count === this.props.survey.length){
+    } else if(count === this.props.survey.size){
       //closing condition
       renderComponent = <div>
-          <Message text={this.props.survey.getIn(count-1, 'responses', 'message')} />
+          <Message text={this.props.survey.getIn([count-1, 'responses', 0, 'message'])} />
           <Message text={this.props.closing.get('message')} />
         </div>;
     } else {
