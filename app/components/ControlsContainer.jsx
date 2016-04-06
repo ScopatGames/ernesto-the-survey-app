@@ -14,7 +14,7 @@ const Controls = React.createClass({
 
     if(count === -1){
       //intro condition
-      renderComponent = <div>
+      renderComponent = <div className='bottomButtons'>
           <Control label={this.props.intro.get('buttonLabel')}
                    handleOnclick={()=>this.props.increment()}/>
         </div>;
@@ -30,12 +30,14 @@ const Controls = React.createClass({
 
       renderComponent = <div>
           {answerComponents}
-          <Control label={"Restart"}
-                   handleOnclick={()=>this.props.restart()}/>
+          <div className='bottomButtons'>
+            <Control label={"Restart"}
+                    handleOnclick={()=>this.props.restart()}/>
+          </div>
         </div>;
     } else if(count === this.props.survey.size){
       //closing condition
-      renderComponent = <div>
+      renderComponent = <div className='bottomButtons'>
           <Control label={this.props.closing.get('buttonLabel')}
                    handleOnclick={()=>this.props.submit()}/>
           <Control label={"Restart"}
@@ -43,14 +45,14 @@ const Controls = React.createClass({
         </div>;
     } else {
       //parting message condition
-      renderComponent = <div>
+      renderComponent = <div className='bottomButtons'>
           <Control label={"Restart"}
                    handleOnclick={()=>this.props.restart()}/>
         </div>
     }
 
     return (
-      <div>
+      <div className='controlsContainer'>
         {renderComponent}
       </div>
     )

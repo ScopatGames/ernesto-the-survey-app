@@ -5,7 +5,9 @@ export default React.createClass ({
   mixins: [PureRenderMixin],
   render: function(){
     return (
-      <button onClick={this.props.handleOnclick}>{this.props.label}</button>
+      <div className='control'>
+        <button onClick={this.props.handleOnclick}><h2>{this.props.label}</h2></button>
+      </div>
     )
   }
 });

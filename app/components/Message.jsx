@@ -5,7 +5,7 @@ export default React.createClass ({
   mixins: [PureRenderMixin],
   render: function(){
     return (
-      <div>
+      <div className='message'>
         <p>{this.props.text}</p>
       </div>
     )

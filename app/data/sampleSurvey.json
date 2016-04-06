@@ -1,7 +1,7 @@
 {
   "intro": {
-    "message": "This is the intro",
-    "buttonLabel": "Begin"
+    "message": "Greetings survey-taker! I am Ernesto, your survey facilitator.  If you are thinking to yourself, 'this thing looks like my thermostat', then you are correct!  In my past career, I was a thermostat app.  It was a great job. I met all types of warm and cool people.  Anyways, I put the heat on my previous owners, and they let me pursue what I really love... giving surveys!  Are you ready to get started?",
+    "buttonLabel": "I almost hit the back button, so yeah."
   },
   "survey": [
     {

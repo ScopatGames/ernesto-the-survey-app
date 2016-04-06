@@ -3,8 +3,13 @@ import React from 'react';
 export default class Header extends React.Component {
   render(){
     return (
-      <div>
-        <h1>Header</h1>
+      <div className="header">
+        <div className='character-base'>
+          <div className='character-eye'>
+            <div className='character-shine'>
+            </div>
+          </div>
+        </div>
       </div>
     )
   }

@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background: linear-gradient(90deg,rgba(255, 214, 0, 0.25), transparent 15%, transparent 85%, rgba(255, 214, 0, 0.25)), url(./images/hex.png);
+  color: #555;
+  margin: 0;
+}
+
+.flexContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+  padding-bottom: 40px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.character-base {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(#29241e 40%, #111 40.2%, #111 60%, #888 61%, #c3e6f0 64%, #888 67%, #666 70%);
+  border-radius: 50%;
+  box-shadow: 10px 10px 20px rgba(59, 6, 55, 0.3);
+}
+
+.character-eye {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(cyan, transparent 50%);
+  animation: glow 6s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0% {opacity: 1;}
+  50% {opacity: 0.55;}
+  100% {opacity: 1;}
+}
+
+.character-shine {
+  width: 70%;
+  height: 70%;
+  background: radial-gradient(white, transparent 30%);
+  border-radius: 50%;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  background-color: #eff;
+  line-height: 150%;
+  border: 1px solid #ddd;
+  border-bottom: none;
+}
+
+.controlsContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+}
+
+.bottomButtons {
+  display: flex;
+  flex-direction: row;
+}
+
+.message {
+  text-align: left;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.answer {
+  text-align: left;
+}
+.answer button {
+  width: 100%;
+  text-align: left;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  color: #555;
+  transition: background-color 0.2s;
+}
+.answer button:hover {
+  background-color: rgb(255, 208, 185);
+}
+
+.control {
+  text-align: left;
+  width: 100%;
+}
+.control button {
+  width: 100%;
+  background-color: #82ded3;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  color: #555;
+  transition: background-color 0.2s;
+}
+
+.control button:hover {
+  background-color: rgb(255, 208, 185);
+}

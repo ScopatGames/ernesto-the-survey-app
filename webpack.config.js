@@ -14,11 +14,15 @@ module.exports = {
       loader: 'react-hot!babel'
     }, {
       test:/\.css$/,
-      loader: 'style!css!postcss'
+      loader: 'style!css!postcss!resolve-url'
     }, {
       test:/\.json$/,
       loader: 'json'
-    }]
+    }, {
+      test: /\.png$/,
+      loader: 'url-loader?limit=100000'
+    }
+  ]
   },
   resolve: {
     extensions: ['', '.js', '.jsx']

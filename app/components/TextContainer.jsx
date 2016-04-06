@@ -50,7 +50,7 @@ const Texts = React.createClass({
     }
 
     return (
-      <div>
+      <div className='textContainer'>
         {renderComponent}
       </div>
     )

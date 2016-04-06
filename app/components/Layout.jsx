@@ -6,7 +6,7 @@ import { ControlsContainer } from './ControlsContainer';
 export default class Layout extends React.Component {
   render() {
     return (
-      <div>
+      <div className='flexContainer'>
         <Header />
         <TextContainer />
         <ControlsContainer />
