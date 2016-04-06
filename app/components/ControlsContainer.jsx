@@ -37,7 +37,7 @@ const Controls = React.createClass({
       //closing condition
       renderComponent = <div>
           <Control label={this.props.closing.get('buttonLabel')}
-                   handleOnclick={()=>this.props.increment()}/>
+                   handleOnclick={()=>this.props.submit()}/>
           <Control label={"Restart"}
                    handleOnclick={()=>this.props.restart()}/>
         </div>;

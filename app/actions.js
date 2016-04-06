@@ -23,3 +23,9 @@ export function restart(){
     type: 'RESTART'
   };
 }
+
+export function submit(){
+  return {
+    type: 'SUBMIT'
+  }
+}

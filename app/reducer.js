@@ -30,6 +30,8 @@ export default function(state = Map(), action){
     return increment(state);
   case 'RESTART':
     return restart(state);
+  case 'SUBMIT':
+    return increment(state);
   }
   return state;
 }
