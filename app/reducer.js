@@ -9,13 +9,19 @@ function increment(state) {
   return state.set('count', count+1);
 }
 
+function selectAnswer(state, answer){
+  const count = state.get('count');
+  const response = state.getIn(['survey', count, 'responses', answer]);
+  return state.updateIn(['survey', count, 'responses'], () => response);
+}
+
 
 export default function(state = Map(), action){
   switch (action.type) {
   case 'SET_STATE':
     return setState(state, action.state);
-  case 'SELECT':
-    return 0;
+  case 'SELECT_ANSWER':
+    return selectAnswer(state, action.answer);
   case 'INCREMENT':
     return increment(state);
   case 'CLEAN_RESULTS':

@@ -17,12 +17,28 @@ describe('reducer', ()=>{
         }),
         survey: List.of(Map({
           question: "Q1",
-          answer: List.of('1A', '1B'),
-          message: List.of('1A', '1B')
+          responses: List.of(
+            Map({
+              answer: "1A",
+              message: "1AM"
+            }),
+            Map({
+              answer: "1B",
+              message: "1BM"
+            })
+          )
         }),Map({
           question: "Q2",
-          answer: List.of('2A', '2B'),
-          message: List.of('2A', '2B')
+          responses: List.of(
+            Map({
+              answer: "2A",
+              message: "2AM"
+            }),
+            Map({
+              answer: "2B",
+              message: "2BM"
+            })
+          )
         })),
         closing: Map({
           message: "Closing message",
@@ -39,12 +55,28 @@ describe('reducer', ()=>{
       }),
       survey: List.of(Map({
         question: "Q1",
-        answer: List.of('1A', '1B'),
-        message: List.of('1A', '1B')
+        responses: List.of(
+          Map({
+            answer: "1A",
+            message: "1AM"
+          }),
+          Map({
+            answer: "1B",
+            message: "1BM"
+          })
+        )
       }),Map({
         question: "Q2",
-        answer: List.of('2A', '2B'),
-        message: List.of('2A', '2B')
+        responses: List.of(
+          Map({
+            answer: "2A",
+            message: "2AM"
+          }),
+          Map({
+            answer: "2B",
+            message: "2BM"
+          })
+        )
       })),
       closing: Map({
         message: "Closing message",
@@ -53,7 +85,7 @@ describe('reducer', ()=>{
     }));
   });
 
-  it('handle INCREMENT', ()=> {
+  it('handles INCREMENT', ()=> {
     const initialState = Map({
       count: -1
     });
@@ -64,6 +96,81 @@ describe('reducer', ()=>{
     expect(nextState).to.equal(fromJS({
       count: 0
     }));
+  });
+
+  it('handles SELECT_ANSWER', ()=>{
+    const initialState = Map({
+      count: 0,
+      intro: Map({
+        message: "Intro message",
+        buttonLabel: "Start"
+      }),
+      survey: List.of(Map({
+        question: "Q1",
+        responses: List.of(
+          Map({
+            answer: "1A",
+            message: "1AM"
+          }),
+          Map({
+            answer: "1B",
+            message: "1BM"
+          })
+        )
+      }),Map({
+        question: "Q2",
+        responses: List.of(
+          Map({
+            answer: "2A",
+            message: "2AM"
+          }),
+          Map({
+            answer: "2B",
+            message: "2BM"
+          })
+        )
+      })),
+      closing: Map({
+        message: "Closing message",
+        buttonLabel: "Submit"
+      })
+    });
+    const action = {
+      type: 'SELECT_ANSWER',
+      answer: 0
+    };
+    const nextState = reducer(initialState, action);
+    expect(nextState).to.equal(fromJS({
+      count: 0,
+      intro: Map({
+        message: "Intro message",
+        buttonLabel: "Start"
+      }),
+      survey: List.of(Map({
+        question: "Q1",
+        responses: Map({
+            answer: "1A",
+            message: "1AM"
+          })
+      }),Map({
+        question: "Q2",
+        responses: List.of(
+          Map({
+            answer: "2A",
+            message: "2AM"
+          }),
+          Map({
+            answer: "2B",
+            message: "2BM"
+          })
+        )
+      })),
+      closing: Map({
+        message: "Closing message",
+        buttonLabel: "Submit"
+      })
+    }));
+
   });
 
 });
