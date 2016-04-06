@@ -17,3 +17,9 @@ export function increment(){
     type: 'INCREMENT'
   };
 }
+
+export function restart(){
+  return {
+    type: 'RESTART'
+  };
+}

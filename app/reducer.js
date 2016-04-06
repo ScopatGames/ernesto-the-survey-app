@@ -1,4 +1,5 @@
-import { List, Map } from 'immutable';
+import { List, Map, fromJS } from 'immutable';
+import { INITIAL_STATE } from './store';
 
 function setState(state, newState) {
   return state.merge(newState);
@@ -14,6 +15,10 @@ function selectAnswer(state, answer){
   return state.updateIn(['survey', count, 'responses'], () => List.of(response));
 }
 
+function restart(state) {
+  return setState(state.clear(), fromJS(INITIAL_STATE));
+}
+
 
 export default function(state = Map(), action){
   switch (action.type) {
@@ -23,8 +28,8 @@ export default function(state = Map(), action){
     return increment(selectAnswer(state, action.answer));
   case 'INCREMENT':
     return increment(state);
-  case 'CLEAN_RESULTS':
-    return 0;
+  case 'RESTART':
+    return restart(state);
   }
   return state;
 }
