@@ -28,10 +28,19 @@ const Texts = React.createClass({
           <Message text={this.props.survey.getIn([count, 'question'])} />
         </div>;
     } else if(count === this.props.survey.size){
-      //closing condition
+     //closing condition
+     const surveyComponents = this.props.survey.map((item, index) => {
+       const answer = item.get('answer');
+       return <div key={index}>
+          <Message text={this.props.survey.getIn([index, 'question'])} />
+          <Message text={this.props.survey.getIn([index, 'responses', 0, 'message'])} />
+       </div>
+     });
+
       renderComponent = <div>
           <Message text={this.props.survey.getIn([count-1, 'responses', 0, 'message'])} />
           <Message text={this.props.closing.get('message')} />
+          {surveyComponents}
         </div>;
     } else {
       //parting message condition
