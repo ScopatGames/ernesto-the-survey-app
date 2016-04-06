@@ -31,6 +31,7 @@ body {
   margin-bottom: 100px;
 
 
+
 }
 .header {
   display: -webkit-box;
@@ -169,7 +170,13 @@ body {
   transition: background-color 0.2s;
   font-size: 100%;
 }
-.answer button:hover {
+
+.answer button:focus {
+  outline: none;
+}
+
+.answer button:hover,
+.answer button:active {
   background-color: rgb(255, 208, 185);
 }
 
@@ -186,6 +193,10 @@ body {
   color: #555;
   -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
+}
+
+.control button:focus {
+  outline: none;
 }
 
 .control button:hover,

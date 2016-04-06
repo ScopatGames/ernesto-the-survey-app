@@ -9,5 +9,8 @@
 4. ```npm run start```
 5. Open browser to localhost 8080.
 
+### To build production version
+```webpack -p```
+
 ## Live version
 [http://scottpatten.net/survey-app](http://scottpatten.net/survey-app)
