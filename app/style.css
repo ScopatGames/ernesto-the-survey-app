@@ -67,19 +67,43 @@ body {
   height: 100%;
   background: -webkit-radial-gradient(cyan, transparent 50%);
   background: radial-gradient(cyan, transparent 50%);
-  -webkit-animation: glow 2s ease-in;
-  animation: glow 2s ease-in;
 }
 
-@-webkit-keyframes glow {
+.turnOn {
+  -webkit-animation: turnOn 2s ease-in;
+  animation: turnOn 2s ease-in;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes turnOn {
   0% {opacity: 0;}
   100% {opacity: 1;}
 }
 
-@keyframes glow {
+@keyframes turnOn {
   0% {opacity: 0;}
   100% {opacity: 1;}
 }
+
+.turnOff {
+  -webkit-animation: turnOff 2s ease-in;
+  animation: turnOff 2s ease-in;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes turnOff {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+@keyframes turnOff {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+
 
 .character-shine {
   position:relative;
