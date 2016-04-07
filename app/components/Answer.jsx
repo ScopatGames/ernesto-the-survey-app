@@ -6,9 +6,7 @@ export default React.createClass ({
   render: function(){
     return (
       <div className='answer'>
-        <a href={'#'}>
-          <button onClick={this.props.handleOnclick}>{this.props.text}</button>
-        </a>
+        <button onClick={this.props.handleOnclick}>{this.props.text}</button>
       </div>
     )
   }
