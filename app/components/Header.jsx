@@ -11,7 +11,7 @@ const HeaderShell = React.createClass({
     }
     else if(this.props.count < this.props.survey.size + 1){
       eyeClass = "character-eye";
-    } else if(this.props.count === this.props.survey.size + 1){
+    } else {
       eyeClass = "character-eye turnOff";
     }
     return (
