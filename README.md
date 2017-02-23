@@ -25,6 +25,3 @@ Open browser to localhost 8080 to use the app.
 ```
 webpack -p
 ```
-
-## Live version
-[http://scottpatten.net/survey-app](http://scottpatten.net/survey-app)
